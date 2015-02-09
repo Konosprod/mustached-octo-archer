@@ -39,13 +39,15 @@ def downloadVideo(url):
     print("\nDone")
 
 
-#Fonctio qui permet de récupérer le code source d'une page internet
+#Fonction qui permet de récupérer le code source d'une page internet
 def getSource(url):
     reponse = urllib.request.urlopen(url)
     pageSource = reponse.read()
    
     return BeautifulSoup(pageSource.decode("utf8"))
     
+    
+#Affichagede l'aide d'utilisation    
 def printHelp():
     print("usage : " + sys.argv[0] + " [url]")
     print("        " + sys.argv[0] + " [url] [filename]")
